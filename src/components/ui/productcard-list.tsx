@@ -15,7 +15,7 @@ export default function ProductCardStyle({ items, grid }: ProductCardProps) {
 			{items.map((item, index) =>
 				grid ? (
 					<Link
-						href={"/products"}
+						href={"/products/product"}
 						key={index}
 						className="p-4 flex-col flex gap-2 bg-white items-center justify-between border border-gray-200 rounded-sm"
 					>
@@ -70,7 +70,7 @@ export default function ProductCardStyle({ items, grid }: ProductCardProps) {
 					</Link>
 				) : (
 					<Link
-						href={"/products"}
+						href={"/products/product"}
 						key={index}
 						className="flex gap-5 items-start justify-center bg-white p-4 border border-gray-200 rounded-sm"
 					>

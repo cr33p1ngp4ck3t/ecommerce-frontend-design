@@ -6,13 +6,14 @@ interface ProductCardProps {
 	items: {
 		image: string;
 		name: string;
-		price: string;
+		price?: string;
 		feature?: string;
 	}[];
 	style: boolean;
+	style2?: boolean;
 }
 
-export default function ProductCard({ items, style }: ProductCardProps) {
+export default function ProductCard({ items, style, style2 = false }: ProductCardProps) {
 	return (
 		<>
 			{items.map((item, index) =>
@@ -37,6 +38,26 @@ export default function ProductCard({ items, style }: ProductCardProps) {
 							<div className="text-blue-500 fill-blue-500 p-2 font-medium flex gap-2 border border-gray-200 rounded-sm w-fit">
 								<ShoppingCart /> Move to Cart
 							</div>
+						</div>
+					</Link>
+				) : style2 ? (
+					<Link
+						href={"/products"}
+						key={index}
+						className="p-2 flex-col flex gap-2 bg-white items-start justify-center text-start rounded-sm"
+					>
+						<div className="bg-gray-100 rounded-sm">
+							<Image
+								src={`${item.image}`}
+								alt=""
+								width={200}
+								height={200}
+								className="mix-blend-multiply"
+							/>
+						</div>
+						<div className="flex flex-col gap-2 bg-white">
+							<div className="w-3/4">{item.name}</div>
+							<div className="text-gray-400 ">$32.00 - $40.00</div>
 						</div>
 					</Link>
 				) : (

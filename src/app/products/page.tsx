@@ -346,6 +346,7 @@ export default function Product() {
 							)}
 						</div>
 					</div>
+					{/* Pagination */}
 					<div className="ml-auto p-4 flex gap-4">
 						<div className="border bg-white border-gray-200 rounded-sm">
 							<div className="p-2 flex gap-2 cursor-pointer ">

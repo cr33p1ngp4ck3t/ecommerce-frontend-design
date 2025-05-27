@@ -227,3 +227,30 @@ export const cartProducts = [
 		price: "99.50",
 	},
 ];
+
+export const productRecom = [
+	{
+		image: "/product/item-4.png",
+		name: "Xiaomi Redmi 8 Original ",
+	},
+	{
+		image: "/product/item-3.png",
+		name: "Xiaomi Redmi 8 Original ",
+	},
+	{
+		image: "/product/item-2.png",
+		name: "Xiaomi Redmi 8 Original ",
+	},
+	{
+		image: "/product/item-1.png",
+		name: "Xiaomi Redmi 8 Original ",
+	},
+	{
+		image: "/product/cloth-4.png",
+		name: "Xiaomi Redmi 8 Original ",
+	},
+	{
+		image: "/product/cloth-1.png",
+		name: "Xiaomi Redmi 8 Original ",
+	},
+];
