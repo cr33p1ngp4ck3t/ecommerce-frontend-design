@@ -9,7 +9,7 @@ import {
 
 export function Breadcrumbs() {
 	return (
-		<Breadcrumb>
+		<Breadcrumb className="md:block hidden">
 			<BreadcrumbList>
 				<BreadcrumbItem>
 					<div>

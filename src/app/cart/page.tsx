@@ -7,19 +7,19 @@ import Image from "next/image";
 export default function CartPage() {
 	return (
 		<div>
-			<div className="w-[1200px] mx-auto">
-				<div className="flex flex-col mt-8 gap-4 w-full ">
-					<div className="text-2xl font-bold">My Cart (3)</div>
+			<div className="md:w-[1200px] w-screen mx-auto">
+				<div className="flex flex-col md:mt-8 gap-4 w-full ">
+					<div className="text-2xl font-bold hidden md:block">My Cart (3)</div>
 					<Cart />
 					<div className="flex flex-col border bg-white border-gray-200 rounded-sm p-4 gap-4">
 						<div className="text-xl font-medium">Saved for later</div>
-						<div className="grid grid-cols-4 gap-5">
+						<div className="md:grid md:grid-cols-4 flex flex-col gap-5">
 							<ProductCard items={cartProducts} style={true} />
 						</div>
 					</div>
 					<div>
 						<div>
-							<div className="relative w-[1200px]">
+							<div className="relative w-[1200px] md:block hidden">
 								<Image
 									src={`/assets/Rectangle-cut.png`}
 									alt=" "

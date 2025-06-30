@@ -30,7 +30,7 @@ export default function CartItem({ img }: cartItemProps) {
 		<div>
 			<div className="bg-white">
 				<div className="border-b border-b-gray-200 p-4 ">
-					<div className="flex justify-between items-center">
+					<div className="flex md:flex-row flex-col justify-between items-center">
 						<div className="flex gap-2 items-start">
 							<div className="rounded-sm px-1 border border-gray-200 bg-gray-100">
 								<Image
@@ -42,14 +42,14 @@ export default function CartItem({ img }: cartItemProps) {
 								/>
 							</div>
 							<div className="flex flex-col justify-between items-start gap-2">
-								<div className="font-medium ">
+								<div className="md:font-medium ">
 									T-shirts with multiple colors, for men and lady
 								</div>
-								<div className="text-gray-400">
+								<div className="text-gray-400 md:text-base text-sm">
 									Size: medium, Color: blue, Material: Plastic <br /> Seller:
 									Artel Market
 								</div>
-								<div className="flex gap-2">
+								<div className="md:flex gap-2  hidden">
 									<Button className="text-red-500 hover:bg-white bg-white border border-gray-200 p-1 px-2">
 										Remove
 									</Button>
@@ -59,7 +59,7 @@ export default function CartItem({ img }: cartItemProps) {
 								</div>
 							</div>
 						</div>
-						<div className="flex flex-col gap-3 text-end">
+						<div className="flex flex-row md:flex-col gap-3 text-end items-center justify-between w-full">
 							<div className="font-medium">$54.00</div>
 							<Combobox content={items} placeholder="Qty" />
 						</div>

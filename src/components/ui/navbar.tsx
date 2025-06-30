@@ -48,7 +48,7 @@ const country = [
 
 export default function Navbar() {
 	return (
-		<div className="w-full border-y-2 border-gray-200 bg-white  ">
+		<div className="w-full border-y-2 border-gray-200 bg-white md:block hidden ">
 			<div className="w-[1200px] mx-auto ">
 				<div className=" h-fit py-4 font-semibold   ">
 					<div className="flex items-center justify-between">

@@ -4,13 +4,13 @@ import Navbar from "./navbar";
 
 export default function Hero() {
 	return (
-		<div className="flex w-full items-center justify-center flex-col gap-5 ">
-			<div className="w-full mt-2">
+		<div className="flex w-full items-center justify-center flex-col md:gap-5 ">
+			<div className="w-full md:mt-2">
 				<Navbar />
 			</div>
-			<div className="mx-auto w-[1200px] bg-white border-gray-200 border rounded-sm ">
-				<div className="flex gap-2 p-4">
-					<div className="flex gap-1 flex-col flex-1">
+			<div className="mx-auto w-screen md:w-[1200px] bg-white border-gray-200 md:border md:rounded-sm ">
+				<div className="md:flex gap-2 p-4 ">
+					<div className="gap-1 flex-col flex-1 md:flex hidden">
 						<Button className="button-style">Automobiles</Button>
 						<Button className="button-style">Clothes Wear</Button>
 						<Button className="button-style">Home Interior</Button>
@@ -24,7 +24,7 @@ export default function Hero() {
 					<div>
 						<Image src={"/assets/banner-hero.png"} alt="" width={665} height={360} />
 					</div>
-					<div className="flex gap-1 flex-col w-[200px] ">
+					<div className="md:flex hidden gap-1 flex-col w-[200px] ">
 						<div className="p-4 bg-blue-100 flex flex-col gap-2 rounded-md">
 							<div className="flex gap-1 items-center justify-center ">
 								<Image src={"/svgs/Avatar.png"} alt="" width={44} height={44} />

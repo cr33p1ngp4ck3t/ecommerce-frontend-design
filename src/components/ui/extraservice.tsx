@@ -26,7 +26,7 @@ const serv = [
 export default function Services() {
 	return (
 		<div>
-			<div className="w-[1200px]  ">
+			<div className="w-[1200px] md:block hidden ">
 				<div className="flex flex-col mt-4">
 					<div className="text-2xl font-semibold">Our Extra Services</div>
 					<div className="grid grid-cols-4 gap-4 my-4">

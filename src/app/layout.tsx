@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/ui/header";
 import { NextFont } from "@next/font";
 import Footer from "@/components/ui/footer";
+import { usePathname } from "next/navigation";
 
 const inter: NextFont = {
 	className: "inter",
@@ -17,10 +18,17 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const pathname = usePathname();
 	return (
 		<html lang="en">
 			<body className={`antialiased bg-gray-50 ${inter}`}>
-				<Header />
+				{pathname == "/" ? (
+					<Header style={true} search />
+				) : pathname == "/products" ? (
+					<Header style={false} search title="Products" />
+				) : (
+					<Header style={false} search={false} title="Shopping Cart" />
+				)}
 				{children}
 				<Footer />
 			</body>

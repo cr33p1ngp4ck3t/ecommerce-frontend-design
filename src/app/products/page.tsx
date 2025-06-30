@@ -27,14 +27,14 @@ export default function Product() {
 	return (
 		<>
 			<Navbar />
-			<div className="w-[1200px] mx-auto mb-10 ">
+			<div className="md:w-[1200px] w-screen mx-auto mb-10 ">
 				<div className="flex flex-col gap-4">
-					<div className="p-5 text-gray-400 text-lg">
+					<div className="p-5 text-gray-400 text-lg md:block hidden">
 						<Breadcrumbs />
 					</div>
-					<div className="grid grid-cols-5">
+					<div className="md:grid md:grid-cols-5 flex flex-col">
 						{/* Sidebar */}
-						<div className="col-span-1 px-2">
+						<div className="col-span-1 px-2 md:block hidden">
 							<div className="w-full bg-gray-200 h-[1px] mt-4" />
 							<Collapsible defaultOpen className="group/collapsible">
 								<SidebarGroup>
@@ -305,17 +305,20 @@ export default function Product() {
 							{/* Filter */}
 							<div className="w-full p-2 bg-white border border-gray-200 rounded-sm">
 								<div className="flex items-center justify-between">
-									<div className="ml-2">
+									<div className="ml-2 md:block hidden">
 										12,911 items in <strong>Mobile Accessory</strong>
 									</div>
-									<div className="flex gap-2 items-center justify-center">
-										<div className="flex items-center my-2 gap-2 rounded-sm">
+									<div className="flex gap-2 md:items-center md:justify-center justify-between md:w-min w-full">
+										<div className="md:flex items-center my-2 gap-2 rounded-sm hidden">
 											<Checkbox />
 											<label className="leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mr-2">
 												Verified Only
 											</label>
 										</div>
 										<Combobox content={featured} placeholder="Featured" />
+										<span className="md:hidden block">
+											<Combobox content={featured} placeholder="Featured" />
+										</span>
 										<div className="border border-gray-200 rounded-sm flex p-1 gap-0.5">
 											<Menu
 												className=" w-6 h-6 cursor-pointer"
@@ -334,7 +337,7 @@ export default function Product() {
 							{isGrid ? (
 								<div>
 									<div>
-										<div className="grid grid-cols-3 gap-4">
+										<div className="grid grid-cols-2 md:grid-cols-3 gap-4">
 											<ProductCardStyle items={products} grid={true} />
 										</div>
 									</div>

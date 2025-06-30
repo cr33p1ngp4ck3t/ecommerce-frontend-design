@@ -14,13 +14,13 @@ export default function ProductPage() {
 	const tabs = ["Description", "Reviews", "Shipping", "About Seller"];
 	return (
 		<div>
-			<div className="w-[1200px] mx-auto">
+			<div className="md:w-[1200px] w-screen mx-auto">
 				<div className="flex flex-col mt-8 gap-4 w-full ">
 					<Breadcrumbs />
 					<div className="flex flex-col gap-5">
-						<div className="grid grid-cols-4 bg-white p-4 border border-gray-200 gap-5">
-							<div className="col-span-3">
-								<div className="flex gap-4">
+						<div className="flex flex-col md:grid md:grid-cols-4 bg-white p-4 border border-gray-200 gap-5">
+							<div className="md:col-span-3">
+								<div className="flex gap-4 md:flex-row flex-col">
 									<div className="flex-2/5">
 										<div className="flex flex-col gap-4">
 											<div className="border border-gray-200 rounded-sm">
@@ -33,7 +33,7 @@ export default function ProductPage() {
 												/>
 											</div>
 											<div>
-												<div className="flex justify-between">
+												<div className=" justify-between md:flex hidden">
 													{[
 														"image 35",
 														"image 39",
@@ -60,7 +60,7 @@ export default function ProductPage() {
 										</div>
 									</div>
 									<div className="flex flex-col flex-3/5 gap-2">
-										<div className="flex gap-2 items-center text-green-700">
+										<div className=" gap-2 items-center text-green-700 md:flex hidden">
 											<Check /> In Stock
 										</div>
 										<div className="text-xl font-medium">
@@ -166,7 +166,7 @@ export default function ProductPage() {
 									</div>
 								</div>
 							</div>
-							<div className="col-span-1 flex flex-col gap-4">
+							<div className="md:col-span-1 flex flex-col w-full gap-4">
 								<div className="flex flex-col bg-white border border-gray-200 rounded-sm gap-4 sticky top-8 p-4 h-fit">
 									<div className="flex gap-2  ">
 										<div className="p-1 px-4 rounded-sm bg-[#C6F3F1] ">
@@ -216,7 +216,7 @@ export default function ProductPage() {
 								</div>
 							</div>
 						</div>
-						<div className="grid grid-cols-4 gap-5">
+						<div className="flex flex-col md:grid md:grid-cols-4 gap-5">
 							<div className="bg-white border border-gray-200 p-4 col-span-3 rounded-sm">
 								<div className="flex flex-col gap-4">
 									<div className="flex w-full gap-5 font-medium border-b border-b-gray-200">
@@ -251,7 +251,7 @@ export default function ProductPage() {
 											in reprehenderit in voluptate velit esse cillum dolore
 											eu fugiat nulla pariatur.{" "}
 										</div>
-										<div className="grid grid-cols-3 w-[550px]">
+										<div className="grid grid-cols-3 w-auto md:w-[550px]">
 											<div className="col-span-1 bg-gray-100 ">
 												<div className="border border-gray-200 p-1">
 													Model
@@ -346,12 +346,12 @@ export default function ProductPage() {
 						</div>
 						<div className="flex flex-col gap-2 p-4 bg-white border border-gray-200 rounded-sm">
 							<div className="text-xl font-medium">Related products</div>
-							<div className="grid grid-cols-6 gap-2">
+							<div className="flex md:grid md:grid-cols-6 gap-2 md:overflow-x-hidden w-full overflow-x-auto snap-x snap-mandatory">
 								<ProductCard items={productRecom} style={false} style2={true} />
 							</div>
 						</div>
 						<div>
-							<div className="relative w-[1200px]">
+							<div className="relative w-[1200px] md:block hidden">
 								<Image
 									src={`/assets/Rectangle-cut.png`}
 									alt=" "

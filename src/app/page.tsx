@@ -21,7 +21,7 @@ export default function Home() {
 			<Services />
 
 			{/* supplier region */}
-			<div className="w-[1200px] ">
+			<div className="w-[1200px]  md:block hidden">
 				<div className="flex flex-col mt-4 gap-4 w-full ">
 					<div className="text-2xl font-semibold">Suppliers by Region</div>
 					<div className="grid grid-cols-5 w-full gap-2">

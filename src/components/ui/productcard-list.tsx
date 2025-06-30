@@ -85,7 +85,7 @@ export default function ProductCardStyle({ items, grid }: ProductCardProps) {
 									<div></div>
 								)}
 							</div>
-							<div className="flex gap-2 items-center">
+							<div className="flex gap-2 items-center justify-between md:justify-start">
 								<div className="flex ">
 									{[...Array(4)].map((_, starIndex) => (
 										<Image
@@ -94,6 +94,7 @@ export default function ProductCardStyle({ items, grid }: ProductCardProps) {
 											alt="Star"
 											width={18}
 											height={18}
+											className="w-[18px] h-[18px] "
 										/>
 									))}
 									{[...Array(1)].map((_, emptyIndex) => (
@@ -103,17 +104,21 @@ export default function ProductCardStyle({ items, grid }: ProductCardProps) {
 											alt="Star"
 											width={18}
 											height={18}
+											className="w-[18px] h-[18px] "
 										/>
 									))}
 								</div>
-								<div className="text-gray-400"> 154 orders</div>
-								<div className="text-green-600"> Free Shipping</div>
+								<div className="text-gray-400 md:w-auto w-full text-center">
+									154 orders
+								</div>
+								<div className="text-green-600 md:block hidden"> Free Shipping</div>
 							</div>
-							<div className="text-gray-700">
+							<div className="text-green-600 md:hidden block"> Free Shipping</div>
+							<div className="text-gray-700 md:block hidden">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna aliqua
 							</div>
-							<div className="text-blue-500 font-medium cursor-pointer ">
+							<div className="text-blue-500 font-medium cursor-pointer md:block hidden">
 								View Details
 							</div>
 						</div>
@@ -122,7 +127,7 @@ export default function ProductCardStyle({ items, grid }: ProductCardProps) {
 							alt=" "
 							width={24}
 							height={24}
-							className="p-2 border border-gray-200 w-10 h-10 rounded-sm "
+							className="p-2 border border-gray-200 w-10 h-10 rounded-sm md:block hidden"
 						/>
 					</Link>
 				)

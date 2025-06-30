@@ -7,9 +7,9 @@ import Image from "next/image";
 export default function Cart() {
 	return (
 		<div>
-			<div className="w-[1200px] ">
+			<div className="md:w-[1200px] w-screen ">
 				<div className="flex flex-col mt-2 gap-4 w-full ">
-					<div className="grid grid-cols-4 gap-5">
+					<div className="flex flex-col md:grid md:grid-cols-4 gap-5">
 						<div className="col-span-3 flex flex-col gap-4 relative ">
 							<div className="flex flex-col gap-3 p-4 rounded-sm border bg-white border-gray-200">
 								{[
@@ -33,7 +33,7 @@ export default function Cart() {
 							</div>
 							<div>
 								<div>
-									<div className="flex justify-between items-center my-4">
+									<div className="md:flex justify-between items-center my-4 hidden">
 										<div className="flex gap-2">
 											<div className="bg-gray-200 rounded-full p-4">
 												<LockKeyhole className="fill-gray-400 text-white mix-blend-multiply  " />

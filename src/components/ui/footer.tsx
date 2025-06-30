@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Footer() {
 	return (
 		<div className="w-full flex justify-center items-center flex-col bg-white">
-			<footer className="text-gray-600 body-font w-[1200px] mx-auto">
+			<footer className="text-gray-600 body-font w-screen md:w-[1200px] mx-auto">
 				<div className="container px-5 py-24 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
 					<div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
 						<Link
@@ -45,7 +45,10 @@ export default function Footer() {
 													"/assets/market-button.png",
 													"/assets/market-button1.png",
 											  ].map((link, i) => (
-													<li key={i}>
+													<li
+														key={i}
+														className="flex place-content-center"
+													>
 														<Image
 															src={link}
 															alt=""
@@ -74,7 +77,7 @@ export default function Footer() {
 				</div>
 			</footer>
 			<div className="w-screen bg-gray-100">
-				<div className="w-[1200px] container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+				<div className="md:w-[1200px] container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
 					<p className="text-gray-500 text-sm text-center sm:text-left">
 						© 2023 Ecommerce
 					</p>
